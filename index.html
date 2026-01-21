@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salman Khan | Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #1c1c1c;
+  --bg-card: #222;
+  --text: #d1d1d1;
+  --white: #fff;
+  --orange: #ff8c1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+header {
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+nav a {
+  color: var(--text);
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+.btn {
+  padding: 10px 22px;
+  background: var(--orange);
+  color: #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 46px;
+  color: var(--white);
+}
+
+.hero h1 span {
+  color: var(--orange);
+}
+
+.hero h3 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: var(--orange);
+}
+
+.hero p {
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons a {
+  margin-right: 15px;
+}
+
+.stats {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.stat h2 {
+  color: var(--orange);
+}
+
+/* ABOUT */
+.about {
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.section-desc {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-img {
+  border: 5px solid var(--orange);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--orange);
+}
+
+.about-text h2 {
+  font-size: 40px;
+  color: var(--white);
+}
+
+.about-text h2 span {
+  color: var(--orange);
+}
+
+.about-text p {
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 8%;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid var(--orange);
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  color: var(--orange);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: var(--orange);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero,
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+}
+
+
+
+/* 2nd */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #141414;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ===== COMMON ===== */
+section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  color: #ff7a00;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.section-title span {
+  color: #fff;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #aaa;
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.skill-card {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 6px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff7a00;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.skill-card h4 {
+  margin-top: 15px;
+  color: #ddd;
+}
+
+/* ===== EDUCATION ===== */
+.education-card {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.edu-left {
+  min-width: 220px;
+  color: #fff;
+}
+
+.edu-right h4 {
+  color: #ff7a00;
+}
+
+.date {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 12px;
+  background: #2a2a2a;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 50px 15px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+
+/* 3rd */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 60px 10%;
+}
+
+.card {
+  background: #2a2a2a;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.tech {
+  color: orange;
+  font-size: 14px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.contact h2 {
+  font-size: 36px;
+  color: orange;
+}
+
+.contact span {
+  color: white;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  color: #aaa;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.contact-form button {
+  background: orange;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ffb347;
+}
+
+/* FOOTER */
+footer {
+  background: #151515;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+footer nav {
+  margin-bottom: 20px;
+}
+
+footer nav a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: orange;
+}
+
+.info {
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.copy {
+  font-size: 14px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contact h2 {
+    font-size: 28px;
+  }
+}
+
+.port1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">𝒮𝒶𝓁𝓂𝒶𝓃 𝓀𝒽𝒶𝓃</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Educations</a>
+    <a href="#">Services</a>
+    <a href="#">Skills</a>
+   
+  
+    <a href="#">Contact</a>
+  </nav>
+  <a href="#" class="btn">Hire Me</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Hi, I'm <br><span>Salman Khan</span></h1>
+    <h3>Full Stack Developer</h3>
+    <p>I build modern, scalable, and high-performance web applications using MERN stack.</p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn">Hire Me</a>
+      <a href="#" class="btn" style="background:#333;color:#fff;">Download CV</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <h2>6+</h2>
+        <p>Projects</p>
+      </div>
+      <div class="stat">
+        <h2>3+</h2>
+        <p>Clients</p>
+      </div>
+      <div class="stat">
+        <h2>1+</h2>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img src="WhatsApp Image 2025-12-01 at 12.05.22_ab6129ec.jpg" alt="Developer Illustration" style="width:100%; border: 5px solid orange; border-radius: 20px;">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2 class="section-title">About.</h2>
+  <p class="section-desc">
+    I’m a full-stack developer from Lakki Marwat, Pakistan, studying SMIT Peshawar.
+  </p>
+
+  <div class="about-content">
+    <div class="about-img">
+      <img src="WhatsApp Image 2025-12-01 at 12.05.22_ab6129ec.jpg" alt="Ashraf Sarwar">
+    </div>
+
+    <div class="about-text">
+      <h2>I’m <span>Salman Khan</span></h2>
+      <p>
+        I am pursuing a Saylani SMIT Peshawar. With over 1 year of experience in
+        Full Stack Development, specializing in MERN stack and modern frameworks like React and Next.js,
+        I deliver high-performance applications and continuously improve my technical and communication skills.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2 class="section-title">Services.</h2>
+  <p class="section-desc">
+    Here are the services I provide with 1 year of experience.
+  </p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">💻</div>
+      <h3>Web Development</h3>
+      <p>Building responsive and scalable websites with modern technologies.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📱</div>
+      <h3>App Development</h3>
+      <p>Native and hybrid mobile app development for Android & iOS.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛒</div>
+      <h3>E-commerce</h3>
+      <p>Custom online stores with payment gateway integration.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h3>Maintenance</h3>
+      <p>Continuous support and updates to keep products running smoothly.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- 2rd -->
+
+<section class="skills-section">
+  <h2 class="section-title">Skills<span>_</span></h2>
+  <p class="section-subtitle">
+    I specialize in full-stack development with a focus on React.js and Node.js,
+    creating high-quality, scalable digital products tailored to client needs.
+  </p>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="circle">90%</div>
+      <h4>HTML</h4>
+    </div>
+    <div class="skill-card">
+      <div class="circle">80%</div>
+      <h4>CSS</h4>
+    </div>
+    <div class="skill-card">
+      <div class="circle">80%</div>
+      <h4>JavaScript</h4>
+    </div>
+    <div class="skill-card">
+      <div class="circle">70%</div>
+      <h4>Bootstrap</h4>
+    </div>
+    <div class="skill-card">
+      <div class="circle">50%</div>
+      <h4>React</h4>
+    </div>
+    <div class="skill-card">
+      <div class="circle">50%</div>
+      <h4>Next.js</h4>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION SECTION ================= -->
+<section class="education-section">
+  <h2 class="section-title">Education<span>.</span></h2>
+  <p class="section-subtitle">
+    Here is a summary of my educational background. This period has been an enriching
+    learning experience, contributing significantly to my personal and professional growth.
+  </p>
+
+  <div class="education-card">
+    <div class="edu-left">
+      <h3>FSC Pre - Engineering</h3>
+    </div>
+    <div class="edu-right">
+      <h4>Government Post Graduated College Lakki Marwat</h4>
+      <span class="date">2023 - Present</span>
+      <p>
+        I am currently web development course from Peshawar,And i'm complete fsc and DIT depolma from Lakki Marwat
+      </p>
+    </div>
+  </div>
+
+  <div class="education-card">
+    <div class="edu-left">
+      <h3>Matriculation (10th)</h3>
+    </div>
+    <div class="edu-right">
+      <h4>GSMGKCM High School NO1 Lakki Marwat</h4>
+      <span class="date">2019 - 2021</span>
+      <p>
+        This foundational education equipped me with strong analytical and problem-solving
+        skills, forming the base  science studies.
+      </p>
+    </div>
+  </div>
+
+  <div class="education-card">
+    <div class="edu-left">
+      <h3>DIT Diploma </h3>
+    </div>
+    <div class="edu-right">
+      <h4>Levele Up Institute Lakki Marwat</h4>
+      <span class="date">2022 - 2023</span>
+      <p>
+        This stage played a key role in shaping my academic interests and discipline,
+        preparing me for advanced studies.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 3rd -->
+
+<h1 class="port1">My Projects</h1>
+<section class="portfolio">
+    <div class="card">
+
+
+        <div class="card">
+      <a href="https://salooo9839.github.io/port/"><img src="port.png" alt="Project"> </a>
+      <h3>My portfolio</h3>
+      <p class="tech">My portfolio</p>
+      <p>Hello, I'm Salman khan</p>
+    </div>
+
+
+
+
+
+
+
+      <a href="https://salooo9839.github.io/3333/"><img src="Screenshot 2026-01-21 180723.png" alt="Project"> </a>
+      <h3>Go-Clothe</h3>
+      <p class="tech">My Cloth House / For Me</p>
+      <p>I'm my create website for selling Cloth on my father Name</p>
+    </div>
+
+
+
+
+        <div class="card">
+      <a href="https://salooo9839.github.io/salooshoes/
+"><img src="ffffffff.png" alt="Project"> </a>
+      <h3>SHOES</h3>
+      <p class="tech">Shoes Shop</p>
+      <p>Find Your
+Sole Mate With Us</p>
+    </div>
+
+
+
+    <div class="card">
+      <a href="https://salooo9839.github.io/Hackathon-project/
+"><img src="Screenshot 2026-01-21 181052.png" alt="Project"></a>
+      <h3>Pawsitively Perfect</h3>
+      <p class="tech"></p>
+      <p>Pawsitively Perfect: Where every pet's dream comes True!.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h2>Contact<span>.</span></h2>
+    <p>Reach Out And Connect With Me</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Subject" />
+      <textarea placeholder="Project Details..." rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Education</a>
+      <a href="#">Services</a>
+      <a href="#">Skills</a>
+     
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="info">
+      <p>📧 salmanhyper4@gmail.com</p>
+      <p>📞 +92 3465923502</p>
+    </div>
+
+    <p class="copy">© 2024 Salman Khan (MERN Stack Developer)</p>
+  </footer>
+
+
+
+</body>
+</html>
